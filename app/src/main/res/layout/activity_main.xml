@@ -136,6 +136,7 @@
               <TextView
                   android:id="@+id/alamat"
                   android:text="@string/alamat"
+                  android:textSize="@dimen/font_size_menu"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:textColor="@color/white"
@@ -176,7 +177,6 @@
                   android:paddingRight="10dp"
                   android:paddingLeft="10dp"
                   android:foregroundGravity="center"
-                  app:layout_constraintBottom_toBottomOf="parent"
                   app:layout_constraintEnd_toEndOf="parent"
                   app:layout_constraintStart_toStartOf="parent"
                   app:layout_constraintTop_toBottomOf="@id/ic_location">
@@ -198,6 +198,7 @@
                   <TextView
                       android:id="@+id/nominal"
                       android:text="Rp10.000"
+                      android:textSize="@dimen/font_size_menu"
                       android:textStyle="bold"
                       android:layout_width="86dp"
                       android:layout_height="wrap_content"
@@ -207,6 +208,7 @@
                   <TextView
                       android:id="@+id/coints"
                       android:text="39.004 Coints"
+                      android:textSize="@dimen/font_size_menu"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       app:layout_constraintTop_toBottomOf="@id/nominal"
@@ -230,6 +232,7 @@
                       android:id="@+id/status_member"
                       android:layout_width="98dp"
                       android:layout_height="wrap_content"
+                      android:textSize="@dimen/font_size_menu"
                       android:text="Member Silver"
                       android:textStyle="bold"
                       app:layout_constraintEnd_toEndOf="parent"
@@ -241,9 +244,127 @@
                       android:layout_width="98dp"
                       android:layout_height="wrap_content"
                       android:text="19 Kupon Baru"
+                      android:textSize="@dimen/font_size_menu"
                       app:layout_constraintStart_toStartOf="@id/status_member"
                       app:layout_constraintTop_toBottomOf="@id/status_member"
                       app:layout_constraintBottom_toBottomOf="@id/ic_member"/>
+
+              </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+              <androidx.constraintlayout.widget.ConstraintLayout
+                  android:id="@+id/list_menu_baris_satu"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="14dp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintTop_toBottomOf="@id/section_member">
+
+                  <ImageView
+                      android:id="@+id/ic_official_store"
+                      android:src="@drawable/official_store"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:layout_marginRight="14dp"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toStartOf="@id/ic_lihat_semua"/>
+
+                  <TextView
+                      android:id="@+id/desc_official_store"
+                      android:text="Official Store"
+                      android:textSize="@dimen/font_size_menu"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="@id/ic_official_store"
+                      app:layout_constraintTop_toBottomOf="@id/ic_official_store"
+                      app:layout_constraintEnd_toEndOf="@id/ic_official_store"/>
+
+                  <ImageView
+                      android:id="@+id/ic_lihat_semua"
+                      android:src="@drawable/lihat_semua"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:layout_marginRight="14dp"
+                      app:layout_constraintStart_toEndOf="@id/ic_official_store"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toStartOf="@id/ic_kebutuhan_harian"/>
+
+                  <TextView
+                      android:id="@+id/desc_lihat_semua"
+                      android:text="Lihat Semua"
+                      android:textSize="@dimen/font_size_menu"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="@id/ic_lihat_semua"
+                      app:layout_constraintTop_toBottomOf="@id/ic_lihat_semua"
+                      app:layout_constraintEnd_toEndOf="@id/ic_lihat_semua"
+                      />
+
+
+                  <ImageView
+                      android:id="@+id/ic_kebutuhan_harian"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:layout_marginRight="14dp"
+                      android:src="@drawable/kebutuhan_harian"
+                      app:layout_constraintStart_toEndOf="@id/ic_lihat_semua"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toStartOf="@id/ic_eletronik"/>
+
+                  <TextView
+                      android:id="@+id/desc_kebutuhan_harian"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="@string/kebutuhan_harian"
+                      android:textSize="@dimen/font_size_menu"
+                      app:layout_constraintEnd_toEndOf="@id/ic_kebutuhan_harian"
+                      app:layout_constraintStart_toStartOf="@id/ic_kebutuhan_harian"
+                      app:layout_constraintTop_toBottomOf="@id/ic_kebutuhan_harian" />
+
+                  <ImageView
+                      android:id="@+id/ic_eletronik"
+                      android:src="@drawable/elektronik"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:layout_marginRight="14dp"
+                      app:layout_constraintStart_toEndOf="@id/ic_kebutuhan_harian"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toStartOf="@id/ic_top_up"/>
+
+                  <TextView
+                      android:id="@+id/desc_elektonik"
+                      android:text="Elektronik"
+                      android:textSize="@dimen/font_size_menu"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="@id/ic_eletronik"
+                      app:layout_constraintTop_toBottomOf="@id/ic_eletronik"
+                      app:layout_constraintEnd_toEndOf="@id/ic_eletronik"
+                      />
+
+                  <ImageView
+                      android:id="@+id/ic_top_up"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:src="@drawable/topup"
+                      app:layout_constraintStart_toEndOf="@id/ic_eletronik"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"/>
+
+                  <TextView
+                      android:id="@+id/desc_top_up"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/font_size_menu"
+                      android:gravity="center"
+                      android:text="@string/top_up_tagihan"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintEnd_toEndOf="@id/ic_top_up"
+                      app:layout_constraintStart_toStartOf="@id/ic_top_up"
+                      app:layout_constraintTop_toBottomOf="@id/ic_top_up" />
 
               </androidx.constraintlayout.widget.ConstraintLayout>
 
