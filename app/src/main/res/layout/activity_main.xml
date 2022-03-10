@@ -362,22 +362,24 @@
 
               <HorizontalScrollView
                   android:layout_width="match_parent"
-                  android:layout_height="500dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="14dp"
                   app:layout_constraintEnd_toEndOf="parent"
                   app:layout_constraintHorizontal_bias="0.0"
                   app:layout_constraintStart_toStartOf="parent"
                   app:layout_constraintTop_toBottomOf="@id/list_menu_baris_satu">
 
                   <androidx.constraintlayout.widget.ConstraintLayout
-                      android:layout_marginTop="14dp"
                       android:layout_width="wrap_content"
                       android:layout_height="match_parent">
 
                       <ImageButton
                           android:id="@+id/iklan1"
-                          android:layout_width="370dp"
-                          android:layout_height="128dp"
-                          android:layout_marginStart="16dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="100dp"
+                          android:layout_marginLeft="14dp"
+
+                          android:adjustViewBounds="true"
                           android:background="@color/transparant"
                           android:scaleType="fitStart"
                           android:src="@drawable/iklan_banner_satu"
@@ -386,15 +388,16 @@
 
                       <ImageButton
                           android:id="@+id/iklan2"
-                          android:layout_width="370dp"
-                          android:layout_height="128dp"
-                          android:layout_marginStart="16dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="100dp"
+                          android:adjustViewBounds="true"
+                          android:layout_marginStart="14dp"
+                          android:layout_marginEnd="14dp"
                           android:background="@color/transparant"
                           android:scaleType="fitStart"
                           android:src="@drawable/iklan_banner_dua"
                           app:layout_constraintStart_toEndOf="@id/iklan1"
-                      "
-                      app:layout_constraintTop_toTopOf="parent" />
+                          app:layout_constraintTop_toTopOf="parent" />
 
 
                   </androidx.constraintlayout.widget.ConstraintLayout>
