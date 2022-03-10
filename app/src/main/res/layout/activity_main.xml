@@ -243,7 +243,7 @@
 
               </androidx.constraintlayout.widget.ConstraintLayout>
 
-              <!--Menu List-->
+              <!--Menu Lis Satu-->
               <androidx.constraintlayout.widget.ConstraintLayout
                   android:id="@+id/list_menu_baris_satu"
                   android:layout_width="0dp"
@@ -360,7 +360,9 @@
 
               </androidx.constraintlayout.widget.ConstraintLayout>
 
+              <!--Banner Iklan-->
               <HorizontalScrollView
+                  android:id="@+id/banner_iklan"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:layout_marginTop="14dp"
@@ -405,6 +407,131 @@
 
               </HorizontalScrollView>
 
+              <!--Menu Lis Satu-->
+              <androidx.constraintlayout.widget.ConstraintLayout
+                  android:id="@+id/list_menu_baris_dua"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="14dp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintTop_toBottomOf="@id/banner_iklan">
+
+                  <ImageView
+                      android:id="@+id/ic_pedulilindungi"
+                      android:src="@drawable/peduli_lindungi"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:layout_marginRight="14dp"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toStartOf="@id/ic_bazar"/>
+
+                  <TextView
+                      android:id="@+id/desc_peduli_lindungi"
+                      android:text="@string/peduli_lindungi"
+                      android:gravity="center"
+                      android:textSize="@dimen/font_size_menu"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="@id/ic_pedulilindungi"
+                      app:layout_constraintTop_toBottomOf="@id/ic_pedulilindungi"
+                      app:layout_constraintEnd_toEndOf="@id/ic_pedulilindungi"/>
+
+                  <ImageView
+                      android:id="@+id/ic_bazar"
+                      android:src="@drawable/bazar"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:layout_marginRight="14dp"
+                      app:layout_constraintStart_toEndOf="@id/ic_pedulilindungi"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toStartOf="@id/ic_live_shopping"/>
+
+                  <TextView
+                      android:id="@+id/desc_bazar"
+                      android:text="@string/bazar_hari_ini"
+                      android:textSize="@dimen/font_size_menu"
+                      android:gravity="center"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="@id/ic_bazar"
+                      app:layout_constraintTop_toBottomOf="@id/ic_bazar"
+                      app:layout_constraintEnd_toEndOf="@id/ic_bazar"
+                      />
+
+
+                  <ImageView
+                      android:id="@+id/ic_live_shopping"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:layout_marginRight="14dp"
+                      android:src="@drawable/live_shopping"
+                      app:layout_constraintStart_toEndOf="@id/ic_bazar"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toStartOf="@id/ic_tokopedia_seru"/>
+
+                  <TextView
+                      android:id="@+id/desc_live_shopping"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="@string/live_shopping"
+                      android:textSize="@dimen/font_size_menu"
+                      app:layout_constraintEnd_toEndOf="@id/ic_live_shopping"
+                      app:layout_constraintStart_toStartOf="@id/ic_live_shopping"
+                      app:layout_constraintTop_toBottomOf="@id/ic_live_shopping" />
+
+                  <ImageView
+                      android:id="@+id/ic_tokopedia_seru"
+                      android:src="@drawable/seru"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:layout_marginEnd="14dp"
+                      app:layout_constraintStart_toEndOf="@id/ic_live_shopping"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toStartOf="@id/ic_bangga_lokal"/>
+
+                  <TextView
+                      android:id="@+id/desc_tokopedia_seru"
+                      android:text="@string/tokopedia_seru"
+                      android:textSize="@dimen/font_size_menu"
+                      android:gravity="center"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="@id/ic_tokopedia_seru"
+                      app:layout_constraintTop_toBottomOf="@id/ic_tokopedia_seru"
+                      app:layout_constraintEnd_toEndOf="@id/ic_tokopedia_seru"/>
+
+                  <ImageView
+                      android:id="@+id/ic_bangga_lokal"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:src="@drawable/bangga_lokal"
+                      app:layout_constraintStart_toEndOf="@id/ic_tokopedia_seru"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"/>
+
+                  <TextView
+                      android:id="@+id/desc_bangga_lokal"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/font_size_menu"
+                      android:gravity="center"
+                      android:text="@string/bangga_lokal"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintEnd_toEndOf="@id/ic_bangga_lokal"
+                      app:layout_constraintStart_toStartOf="@id/ic_bangga_lokal"
+                      app:layout_constraintTop_toBottomOf="@id/ic_bangga_lokal" />
+
+              </androidx.constraintlayout.widget.ConstraintLayout>
+
+              <TextView
+                  android:text="Kejar Diskon Spesial"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@id/list_menu_baris_dua"
+                  app:layout_constraintStart_toStartOf="parent"/>
 
           </androidx.constraintlayout.widget.ConstraintLayout>
 

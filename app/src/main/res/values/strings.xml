@@ -3,4 +3,9 @@
     <string name="alamat">Dikirim ke <b>Rumah Rizqi Fakhri</b></string>
     <string name="kebutuhan_harian">Kebutuhan\nHarian</string>
     <string name="top_up_tagihan">Top-Up &amp;\nTagihan</string>
+    <string name="peduli_lindungi">Peduli\nLindungi</string>
+    <string name="bazar_hari_ini">Bazar Hari\nIni</string>
+    <string name="live_shopping">Live\nShopping</string>
+    <string name="tokopedia_seru">Tokopedia\nSeru</string>
+    <string name="bangga_lokal">Bangga\nLokal</string>
 </resources>
