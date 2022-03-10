@@ -255,11 +255,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/section_member">
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_official_store"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="14dp"
+                    android:scaleType="fitCenter"
+                    android:background="@color/transparant"
                     android:src="@drawable/official_store"
                     app:layout_constraintEnd_toStartOf="@id/ic_lihat_semua"
                     app:layout_constraintStart_toStartOf="parent"
@@ -275,11 +277,13 @@
                     app:layout_constraintStart_toStartOf="@id/ic_official_store"
                     app:layout_constraintTop_toBottomOf="@id/ic_official_store" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_lihat_semua"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="14dp"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/lihat_semua"
                     app:layout_constraintEnd_toStartOf="@id/ic_kebutuhan_harian"
                     app:layout_constraintStart_toEndOf="@id/ic_official_store"
@@ -296,11 +300,13 @@
                     app:layout_constraintTop_toBottomOf="@id/ic_lihat_semua" />
 
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_kebutuhan_harian"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="14dp"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/kebutuhan_harian"
                     app:layout_constraintEnd_toStartOf="@id/ic_eletronik"
                     app:layout_constraintStart_toEndOf="@id/ic_lihat_semua"
@@ -317,11 +323,13 @@
                     app:layout_constraintStart_toStartOf="@id/ic_kebutuhan_harian"
                     app:layout_constraintTop_toBottomOf="@id/ic_kebutuhan_harian" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_eletronik"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="14dp"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/elektronik"
                     app:layout_constraintEnd_toStartOf="@id/ic_top_up"
                     app:layout_constraintStart_toEndOf="@id/ic_kebutuhan_harian"
@@ -337,11 +345,13 @@
                     app:layout_constraintStart_toStartOf="@id/ic_eletronik"
                     app:layout_constraintTop_toBottomOf="@id/ic_eletronik" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_top_up"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/topup"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/ic_eletronik"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -416,12 +426,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/banner_iklan">
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_pedulilindungi"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="14dp"
                     android:src="@drawable/peduli_lindungi"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     app:layout_constraintEnd_toStartOf="@id/ic_bazar"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -437,11 +449,13 @@
                     app:layout_constraintStart_toStartOf="@id/ic_pedulilindungi"
                     app:layout_constraintTop_toBottomOf="@id/ic_pedulilindungi" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_bazar"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="14dp"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/bazar"
                     app:layout_constraintEnd_toStartOf="@id/ic_live_shopping"
                     app:layout_constraintStart_toEndOf="@id/ic_pedulilindungi"
@@ -459,11 +473,13 @@
                     app:layout_constraintTop_toBottomOf="@id/ic_bazar" />
 
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_live_shopping"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="14dp"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/live_shopping"
                     app:layout_constraintEnd_toStartOf="@id/ic_tokopedia_seru"
                     app:layout_constraintStart_toEndOf="@id/ic_bazar"
@@ -480,11 +496,13 @@
                     app:layout_constraintStart_toStartOf="@id/ic_live_shopping"
                     app:layout_constraintTop_toBottomOf="@id/ic_live_shopping" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_tokopedia_seru"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="14dp"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/seru"
                     app:layout_constraintEnd_toStartOf="@id/ic_bangga_lokal"
                     app:layout_constraintStart_toEndOf="@id/ic_live_shopping"
@@ -501,10 +519,12 @@
                     app:layout_constraintStart_toStartOf="@id/ic_tokopedia_seru"
                     app:layout_constraintTop_toBottomOf="@id/ic_tokopedia_seru" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_bangga_lokal"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/bangga_lokal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/ic_tokopedia_seru"
@@ -612,12 +632,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <ImageButton
+                        android:id="@+id/logo_kejardiskon"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:background="@color/transparant"
+                        android:layout_marginRight="14dp"
+                        android:src="@drawable/kejar_diskon"
+                        app:layout_constraintEnd_toStartOf="@id/iklan_baris_satu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:contentDescription="TODO" />
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/iklan_baris_satu"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/hire_round"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/logo_kejardiskon"
                         app:layout_constraintEnd_toStartOf="@id/iklan_baris_dua">
 
                         <ImageButton
@@ -802,15 +837,23 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
             </HorizontalScrollView>
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/control_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 
