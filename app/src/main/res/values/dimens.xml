@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="font_size_menu">10sp</dimen>
+    <dimen name="tigadua">32dp</dimen>
+    <dimen name="enam">6dp</dimen>
+    <dimen name="empatbelas">14dp</dimen>
+    <dimen name="empat">4dp</dimen>
+    <dimen name="delapanbelas">18dp</dimen>
+    <dimen name="enamempat">64dp</dimen>
 </resources>
