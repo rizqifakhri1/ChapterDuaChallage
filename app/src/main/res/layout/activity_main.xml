@@ -7,8 +7,6 @@
     tools:context=".MainActivity">
 
     <!--Header Search Bar-->
-
-    <!--Scroll view-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header_konten"
         android:layout_width="match_parent"
@@ -34,8 +32,8 @@
         <!--Btn inbox-->
         <ImageButton
             android:id="@+id/inbox"
-            android:layout_width="@dimen/tigadua"
-            android:layout_height="@dimen/tigadua"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:background="@color/transparant"
             android:padding="@dimen/enam"
             android:scaleType="fitCenter"
