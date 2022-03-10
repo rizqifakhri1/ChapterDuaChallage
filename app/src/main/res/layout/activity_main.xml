@@ -104,7 +104,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/control_menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_konten">
 
@@ -843,14 +843,140 @@
 
     </ScrollView>
 
+    <!--Menu Bawah-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/control_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
+        <!--Home-->
+        <ImageButton
+            android:id="@+id/ic_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="14dp"
+            android:scaleType="fitCenter"
+            android:background="@color/transparant"
+            android:src="@drawable/home"
+            app:layout_constraintEnd_toStartOf="@id/ic_feed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/desc_home"/>
+
+        <TextView
+            android:id="@+id/desc_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="@dimen/font_size_menu"
+            app:layout_constraintEnd_toEndOf="@id/ic_home"
+            app:layout_constraintStart_toStartOf="@id/ic_home"
+            app:layout_constraintTop_toBottomOf="@id/ic_home"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!--Feed-->
+        <ImageButton
+            android:id="@+id/ic_feed"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="14dp"
+            android:background="@color/transparant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/feed"
+            app:layout_constraintEnd_toStartOf="@id/ic_official_store_bottom"
+            app:layout_constraintStart_toEndOf="@id/ic_home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/desc_feed"/>
+
+        <TextView
+            android:id="@+id/desc_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feed"
+            android:textSize="@dimen/font_size_menu"
+            app:layout_constraintEnd_toEndOf="@id/ic_feed"
+            app:layout_constraintStart_toStartOf="@id/ic_feed"
+            app:layout_constraintTop_toBottomOf="@id/ic_feed"
+            app:layout_constraintBottom_toBottomOf="parent"/>/>
+
+
+        <!--Official Menu Bottom-->
+        <ImageButton
+            android:id="@+id/ic_official_store_bottom"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="14dp"
+            android:background="@color/transparant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/official_store_line"
+            app:layout_constraintEnd_toStartOf="@id/ic_wishlish"
+            app:layout_constraintStart_toEndOf="@id/ic_feed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/desc_official_store_bottom"/>
+
+        <TextView
+            android:id="@+id/desc_official_store_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Official Store"
+            android:textSize="@dimen/font_size_menu"
+            app:layout_constraintEnd_toEndOf="@id/ic_official_store_bottom"
+            app:layout_constraintStart_toStartOf="@id/ic_official_store_bottom"
+            app:layout_constraintTop_toBottomOf="@id/ic_official_store_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"/>/>
+
+        <!--Wishlist-->
+        <ImageButton
+            android:id="@+id/ic_wishlish"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="14dp"
+            android:background="@color/transparant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/wishlish"
+            app:layout_constraintEnd_toStartOf="@id/ic_transaksi"
+            app:layout_constraintStart_toEndOf="@id/ic_official_store_bottom"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/desc_wishlist"/>
+
+        <TextView
+            android:id="@+id/desc_wishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wishlist"
+            android:textSize="@dimen/font_size_menu"
+            app:layout_constraintEnd_toEndOf="@id/ic_wishlish"
+            app:layout_constraintStart_toStartOf="@id/ic_wishlish"
+            app:layout_constraintTop_toBottomOf="@id/ic_wishlish" />
+
+        <!--Transaksi-->
+        <ImageButton
+            android:id="@+id/ic_transaksi"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/topup"
+            android:background="@color/transparant"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_wishlish"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/desc_trasnsaksi"/>
+
+        <TextView
+            android:id="@+id/desc_trasnsaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaksi"
+            android:textSize="@dimen/font_size_menu"
+            app:layout_constraintEnd_toEndOf="@id/ic_transaksi"
+            app:layout_constraintStart_toStartOf="@id/ic_transaksi"
+            app:layout_constraintTop_toBottomOf="@id/ic_transaksi"
+            app:layout_constraintBottom_toBottomOf="parent"/>/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
