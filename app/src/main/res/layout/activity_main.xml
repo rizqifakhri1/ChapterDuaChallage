@@ -972,7 +972,8 @@
             app:layout_constraintEnd_toStartOf="@id/ic_transaksi"
             app:layout_constraintStart_toEndOf="@id/ic_official_store_bottom"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/desc_wishlist"/>
+            app:layout_constraintBottom_toTopOf="@id/desc_wishlist"
+            tools:ignore="TooManyViews" />
 
         <TextView
             android:id="@+id/desc_wishlist"
