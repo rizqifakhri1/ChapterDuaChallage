@@ -8,4 +8,5 @@
     <string name="live_shopping">Live\nShopping</string>
     <string name="tokopedia_seru">Tokopedia\nSeru</string>
     <string name="bangga_lokal">Bangga\nLokal</string>
+    <string name="harga_sebelum_diskon"><s>Rp 1.000.000</s></string>
 </resources>

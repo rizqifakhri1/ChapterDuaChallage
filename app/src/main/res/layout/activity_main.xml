@@ -6,16 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--Background Hijau-->
-    <View
-        android:background="@drawable/bg_hijau"
-        android:layout_width="wrap_content"
-        android:layout_height="128dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <!--Header Search Bar-->
+
+    <!--Scroll view-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header_konten"
         android:layout_width="match_parent"
@@ -63,8 +56,6 @@
             app:layout_constraintStart_toEndOf="@id/inbox"
             app:layout_constraintTop_toTopOf="@id/inbox" />
 
-
-
         <!--Btn Notif-->
         <ImageButton
             android:id="@+id/notif"
@@ -98,11 +89,11 @@
             android:id="@+id/burger_menu"
             android:layout_width="32dp"
             android:layout_height="32dp"
+            android:layout_marginRight="14dp"
             android:background="@color/transparant"
             android:padding="6dp"
             android:scaleType="fitCenter"
             android:src="@drawable/burger"
-            android:layout_marginRight="14dp"
             app:layout_constraintBottom_toBottomOf="@id/cart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/cart"
@@ -110,430 +101,714 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--Scroll view-->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/header_konten"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_konten">
 
-          <androidx.constraintlayout.widget.ConstraintLayout
-              android:id="@+id/fitur"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-              <!--Icon Lokasi-->
-              <ImageButton
-                  android:id="@+id/ic_location"
-                  android:layout_width="20dp"
-                  android:layout_height="18dp"
-                  android:layout_marginLeft="14dp"
-                  android:background="@color/transparant"
-                  android:scaleType="fitCenter"
-                  android:src="@drawable/location"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toTopOf="parent" />
-
-              <!--Alamat-->
-              <TextView
-                  android:id="@+id/alamat"
-                  android:text="@string/alamat"
-                  android:textSize="@dimen/font_size_menu"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:textColor="@color/white"
-                  app:layout_constraintStart_toEndOf="@id/ic_location"
-                  app:layout_constraintTop_toTopOf="@id/ic_location"
-                  app:layout_constraintBottom_toBottomOf="@id/ic_location"/>
-
-              <!--Dropdown-->
-              <ImageButton
-                  android:id="@+id/id_extend"
-                  android:layout_width="20dp"
-                  android:layout_height="18dp"
-                  android:background="@color/transparant"
-                  android:scaleType="fitCenter"
-                  android:src="@drawable/dropdown"
-                  app:layout_constraintStart_toEndOf="@id/alamat"
-                  app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fitur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
-              <!--Member Area-->
-              <androidx.constraintlayout.widget.ConstraintLayout
-                  android:id="@+id/section_member"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="@drawable/hire_round"
-                  android:layout_margin="14dp"
-                  android:elevation="5dp"
-                  android:paddingRight="10dp"
-                  android:paddingLeft="10dp"
-                  android:foregroundGravity="center"
-                  app:layout_constraintEnd_toEndOf="parent"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toBottomOf="@id/ic_location">
-
-                  <ImageButton
-                      android:id="@+id/ic_gopay"
-                      android:layout_width="32dp"
-                      android:layout_height="32dp"
-                      android:layout_marginTop="10dp"
-                      android:layout_marginBottom="10dp"
-                      android:background="@color/transparant"
-                      android:scaleType="fitCenter"
-                      android:src="@drawable/gopay"
-                      app:layout_constraintBottom_toBottomOf="@id/section_member"
-                      app:layout_constraintEnd_toStartOf="@id/nominal"
-                      app:layout_constraintStart_toStartOf="@id/section_member"
-                      app:layout_constraintTop_toTopOf="@id/section_member" />
-
-                  <TextView
-                      android:id="@+id/nominal"
-                      android:text="Rp10.000"
-                      android:textSize="@dimen/font_size_menu"
-                      android:textStyle="bold"
-                      android:layout_width="86dp"
-                      android:layout_height="wrap_content"
-                      app:layout_constraintStart_toEndOf="@id/ic_gopay"
-                      app:layout_constraintTop_toTopOf="@id/ic_gopay"/>
-
-                  <TextView
-                      android:id="@+id/coints"
-                      android:text="39.004 Coints"
-                      android:textSize="@dimen/font_size_menu"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      app:layout_constraintTop_toBottomOf="@id/nominal"
-                      app:layout_constraintStart_toStartOf="@id/nominal"
-                      app:layout_constraintBottom_toBottomOf="@id/ic_gopay"/>
-
-                  <ImageButton
-                      android:id="@+id/ic_member"
-                      android:layout_width="32dp"
-                      android:layout_height="32dp"
-                      android:layout_marginLeft="14dp"
-                      android:background="@color/transparant"
-                      android:scaleType="fitCenter"
-                      android:src="@drawable/member"
-                      app:layout_constraintStart_toEndOf="@id/nominal"
-                      app:layout_constraintTop_toTopOf="@id/section_member"
-                      app:layout_constraintBottom_toBottomOf="@id/section_member"
-                      app:layout_constraintEnd_toStartOf="@id/status_member"/>
-
-                  <TextView
-                      android:id="@+id/status_member"
-                      android:layout_width="98dp"
-                      android:layout_height="wrap_content"
-                      android:textSize="@dimen/font_size_menu"
-                      android:text="Member Silver"
-                      android:textStyle="bold"
-                      app:layout_constraintEnd_toEndOf="parent"
-                      app:layout_constraintStart_toEndOf="@id/ic_member"
-                      app:layout_constraintTop_toTopOf="@id/ic_member" />
-
-                  <TextView
-                      android:id="@+id/kupon_member"
-                      android:layout_width="98dp"
-                      android:layout_height="wrap_content"
-                      android:text="19 Kupon Baru"
-                      android:textSize="@dimen/font_size_menu"
-                      app:layout_constraintStart_toStartOf="@id/status_member"
-                      app:layout_constraintTop_toBottomOf="@id/status_member"
-                      app:layout_constraintBottom_toBottomOf="@id/ic_member"/>
-
-              </androidx.constraintlayout.widget.ConstraintLayout>
-
-              <!--Menu Lis Satu-->
-              <androidx.constraintlayout.widget.ConstraintLayout
-                  android:id="@+id/list_menu_baris_satu"
-                  android:layout_width="0dp"
-                  android:layout_height="wrap_content"
-                  android:layout_margin="14dp"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintEnd_toEndOf="parent"
-                  app:layout_constraintTop_toBottomOf="@id/section_member">
-
-                  <ImageView
-                      android:id="@+id/ic_official_store"
-                      android:src="@drawable/official_store"
-                      android:layout_width="40dp"
-                      android:layout_height="40dp"
-                      android:layout_marginRight="14dp"
-                      app:layout_constraintStart_toStartOf="parent"
-                      app:layout_constraintTop_toTopOf="parent"
-                      app:layout_constraintEnd_toStartOf="@id/ic_lihat_semua"/>
-
-                  <TextView
-                      android:id="@+id/desc_official_store"
-                      android:text="Official Store"
-                      android:textSize="@dimen/font_size_menu"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      app:layout_constraintStart_toStartOf="@id/ic_official_store"
-                      app:layout_constraintTop_toBottomOf="@id/ic_official_store"
-                      app:layout_constraintEnd_toEndOf="@id/ic_official_store"/>
-
-                  <ImageView
-                      android:id="@+id/ic_lihat_semua"
-                      android:src="@drawable/lihat_semua"
-                      android:layout_width="40dp"
-                      android:layout_height="40dp"
-                      android:layout_marginRight="14dp"
-                      app:layout_constraintStart_toEndOf="@id/ic_official_store"
-                      app:layout_constraintTop_toTopOf="parent"
-                      app:layout_constraintEnd_toStartOf="@id/ic_kebutuhan_harian"/>
-
-                  <TextView
-                      android:id="@+id/desc_lihat_semua"
-                      android:text="Lihat Semua"
-                      android:textSize="@dimen/font_size_menu"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      app:layout_constraintStart_toStartOf="@id/ic_lihat_semua"
-                      app:layout_constraintTop_toBottomOf="@id/ic_lihat_semua"
-                      app:layout_constraintEnd_toEndOf="@id/ic_lihat_semua"
-                      />
+            <!--Background Hijau-->
+            <View
+                android:background="@drawable/bg_hijau"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
 
-                  <ImageView
-                      android:id="@+id/ic_kebutuhan_harian"
-                      android:layout_width="40dp"
-                      android:layout_height="40dp"
-                      android:layout_marginRight="14dp"
-                      android:src="@drawable/kebutuhan_harian"
-                      app:layout_constraintStart_toEndOf="@id/ic_lihat_semua"
-                      app:layout_constraintTop_toTopOf="parent"
-                      app:layout_constraintEnd_toStartOf="@id/ic_eletronik"/>
+            <!--Icon Lokasi-->
+            <ImageButton
+                android:id="@+id/ic_location"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="14dp"
+                android:background="@color/transparant"
+                android:scaleType="fitCenter"
+                android:src="@drawable/location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                  <TextView
-                      android:id="@+id/desc_kebutuhan_harian"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:gravity="center"
-                      android:text="@string/kebutuhan_harian"
-                      android:textSize="@dimen/font_size_menu"
-                      app:layout_constraintEnd_toEndOf="@id/ic_kebutuhan_harian"
-                      app:layout_constraintStart_toStartOf="@id/ic_kebutuhan_harian"
-                      app:layout_constraintTop_toBottomOf="@id/ic_kebutuhan_harian" />
+            <!--Alamat-->
+            <TextView
+                android:id="@+id/alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alamat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_menu"
+                app:layout_constraintBottom_toBottomOf="@id/ic_location"
+                app:layout_constraintStart_toEndOf="@id/ic_location"
+                app:layout_constraintTop_toTopOf="@id/ic_location" />
 
-                  <ImageView
-                      android:id="@+id/ic_eletronik"
-                      android:src="@drawable/elektronik"
-                      android:layout_width="40dp"
-                      android:layout_height="40dp"
-                      android:layout_marginRight="14dp"
-                      app:layout_constraintStart_toEndOf="@id/ic_kebutuhan_harian"
-                      app:layout_constraintTop_toTopOf="parent"
-                      app:layout_constraintEnd_toStartOf="@id/ic_top_up"/>
-
-                  <TextView
-                      android:id="@+id/desc_elektonik"
-                      android:text="Elektronik"
-                      android:textSize="@dimen/font_size_menu"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      app:layout_constraintStart_toStartOf="@id/ic_eletronik"
-                      app:layout_constraintTop_toBottomOf="@id/ic_eletronik"
-                      app:layout_constraintEnd_toEndOf="@id/ic_eletronik"
-                      />
-
-                  <ImageView
-                      android:id="@+id/ic_top_up"
-                      android:layout_width="40dp"
-                      android:layout_height="40dp"
-                      android:src="@drawable/topup"
-                      app:layout_constraintStart_toEndOf="@id/ic_eletronik"
-                      app:layout_constraintTop_toTopOf="parent"
-                      app:layout_constraintEnd_toEndOf="parent"/>
-
-                  <TextView
-                      android:id="@+id/desc_top_up"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:textSize="@dimen/font_size_menu"
-                      android:gravity="center"
-                      android:text="@string/top_up_tagihan"
-                      app:layout_constraintBottom_toBottomOf="parent"
-                      app:layout_constraintEnd_toEndOf="@id/ic_top_up"
-                      app:layout_constraintStart_toStartOf="@id/ic_top_up"
-                      app:layout_constraintTop_toBottomOf="@id/ic_top_up" />
-
-              </androidx.constraintlayout.widget.ConstraintLayout>
-
-              <!--Banner Iklan-->
-              <HorizontalScrollView
-                  android:id="@+id/banner_iklan"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_marginTop="14dp"
-                  app:layout_constraintEnd_toEndOf="parent"
-                  app:layout_constraintHorizontal_bias="0.0"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toBottomOf="@id/list_menu_baris_satu">
-
-                  <androidx.constraintlayout.widget.ConstraintLayout
-                      android:layout_width="wrap_content"
-                      android:layout_height="match_parent">
-
-                      <ImageButton
-                          android:id="@+id/iklan1"
-                          android:layout_width="wrap_content"
-                          android:layout_height="100dp"
-                          android:layout_marginLeft="14dp"
-
-                          android:adjustViewBounds="true"
-                          android:background="@color/transparant"
-                          android:scaleType="fitStart"
-                          android:src="@drawable/iklan_banner_satu"
-                          app:layout_constraintStart_toStartOf="parent"
-                          app:layout_constraintTop_toTopOf="parent" />
-
-                      <ImageButton
-                          android:id="@+id/iklan2"
-                          android:layout_width="wrap_content"
-                          android:layout_height="100dp"
-                          android:adjustViewBounds="true"
-                          android:layout_marginStart="14dp"
-                          android:layout_marginEnd="14dp"
-                          android:background="@color/transparant"
-                          android:scaleType="fitStart"
-                          android:src="@drawable/iklan_banner_dua"
-                          app:layout_constraintStart_toEndOf="@id/iklan1"
-                          app:layout_constraintTop_toTopOf="parent" />
+            <!--Dropdown-->
+            <ImageButton
+                android:id="@+id/id_extend"
+                android:layout_width="20dp"
+                android:layout_height="18dp"
+                android:background="@color/transparant"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dropdown"
+                app:layout_constraintStart_toEndOf="@id/alamat"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-                  </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--Member Area-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/section_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                android:background="@drawable/hire_round"
+                android:elevation="5dp"
+                android:foregroundGravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ic_location">
+
+                <ImageButton
+                    android:id="@+id/ic_gopay"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/gopay"
+                    app:layout_constraintBottom_toBottomOf="@id/section_member"
+                    app:layout_constraintEnd_toStartOf="@id/nominal"
+                    app:layout_constraintStart_toStartOf="@id/section_member"
+                    app:layout_constraintTop_toTopOf="@id/section_member" />
+
+                <TextView
+                    android:id="@+id/nominal"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rp10.000"
+                    android:textSize="@dimen/font_size_menu"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ic_gopay"
+                    app:layout_constraintTop_toTopOf="@id/ic_gopay" />
+
+                <TextView
+                    android:id="@+id/coints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="39.004 Coints"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_gopay"
+                    app:layout_constraintStart_toStartOf="@id/nominal"
+                    app:layout_constraintTop_toBottomOf="@id/nominal" />
+
+                <ImageButton
+                    android:id="@+id/ic_member"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/member"
+                    app:layout_constraintBottom_toBottomOf="@id/section_member"
+                    app:layout_constraintEnd_toStartOf="@id/status_member"
+                    app:layout_constraintStart_toEndOf="@id/nominal"
+                    app:layout_constraintTop_toTopOf="@id/section_member" />
+
+                <TextView
+                    android:id="@+id/status_member"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:text="Member Silver"
+                    android:textSize="@dimen/font_size_menu"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_member"
+                    app:layout_constraintTop_toTopOf="@id/ic_member" />
+
+                <TextView
+                    android:id="@+id/kupon_member"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:text="19 Kupon Baru"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_member"
+                    app:layout_constraintStart_toStartOf="@id/status_member"
+                    app:layout_constraintTop_toBottomOf="@id/status_member" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Menu Lis Satu-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/list_menu_baris_satu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/section_member">
+
+                <ImageView
+                    android:id="@+id/ic_official_store"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/official_store"
+                    app:layout_constraintEnd_toStartOf="@id/ic_lihat_semua"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/desc_official_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Official Store"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintEnd_toEndOf="@id/ic_official_store"
+                    app:layout_constraintStart_toStartOf="@id/ic_official_store"
+                    app:layout_constraintTop_toBottomOf="@id/ic_official_store" />
+
+                <ImageView
+                    android:id="@+id/ic_lihat_semua"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/lihat_semua"
+                    app:layout_constraintEnd_toStartOf="@id/ic_kebutuhan_harian"
+                    app:layout_constraintStart_toEndOf="@id/ic_official_store"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/desc_lihat_semua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lihat Semua"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintEnd_toEndOf="@id/ic_lihat_semua"
+                    app:layout_constraintStart_toStartOf="@id/ic_lihat_semua"
+                    app:layout_constraintTop_toBottomOf="@id/ic_lihat_semua" />
 
 
-              </HorizontalScrollView>
+                <ImageView
+                    android:id="@+id/ic_kebutuhan_harian"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/kebutuhan_harian"
+                    app:layout_constraintEnd_toStartOf="@id/ic_eletronik"
+                    app:layout_constraintStart_toEndOf="@id/ic_lihat_semua"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-              <!--Menu Lis Satu-->
-              <androidx.constraintlayout.widget.ConstraintLayout
-                  android:id="@+id/list_menu_baris_dua"
-                  android:layout_width="0dp"
-                  android:layout_height="wrap_content"
-                  android:layout_margin="14dp"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintEnd_toEndOf="parent"
-                  app:layout_constraintTop_toBottomOf="@id/banner_iklan">
+                <TextView
+                    android:id="@+id/desc_kebutuhan_harian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/kebutuhan_harian"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintEnd_toEndOf="@id/ic_kebutuhan_harian"
+                    app:layout_constraintStart_toStartOf="@id/ic_kebutuhan_harian"
+                    app:layout_constraintTop_toBottomOf="@id/ic_kebutuhan_harian" />
 
-                  <ImageView
-                      android:id="@+id/ic_pedulilindungi"
-                      android:src="@drawable/peduli_lindungi"
-                      android:layout_width="40dp"
-                      android:layout_height="40dp"
-                      android:layout_marginRight="14dp"
-                      app:layout_constraintStart_toStartOf="parent"
-                      app:layout_constraintTop_toTopOf="parent"
-                      app:layout_constraintEnd_toStartOf="@id/ic_bazar"/>
+                <ImageView
+                    android:id="@+id/ic_eletronik"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/elektronik"
+                    app:layout_constraintEnd_toStartOf="@id/ic_top_up"
+                    app:layout_constraintStart_toEndOf="@id/ic_kebutuhan_harian"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                  <TextView
-                      android:id="@+id/desc_peduli_lindungi"
-                      android:text="@string/peduli_lindungi"
-                      android:gravity="center"
-                      android:textSize="@dimen/font_size_menu"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      app:layout_constraintStart_toStartOf="@id/ic_pedulilindungi"
-                      app:layout_constraintTop_toBottomOf="@id/ic_pedulilindungi"
-                      app:layout_constraintEnd_toEndOf="@id/ic_pedulilindungi"/>
+                <TextView
+                    android:id="@+id/desc_elektonik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Elektronik"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintEnd_toEndOf="@id/ic_eletronik"
+                    app:layout_constraintStart_toStartOf="@id/ic_eletronik"
+                    app:layout_constraintTop_toBottomOf="@id/ic_eletronik" />
 
-                  <ImageView
-                      android:id="@+id/ic_bazar"
-                      android:src="@drawable/bazar"
-                      android:layout_width="40dp"
-                      android:layout_height="40dp"
-                      android:layout_marginRight="14dp"
-                      app:layout_constraintStart_toEndOf="@id/ic_pedulilindungi"
-                      app:layout_constraintTop_toTopOf="parent"
-                      app:layout_constraintEnd_toStartOf="@id/ic_live_shopping"/>
+                <ImageView
+                    android:id="@+id/ic_top_up"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/topup"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_eletronik"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                  <TextView
-                      android:id="@+id/desc_bazar"
-                      android:text="@string/bazar_hari_ini"
-                      android:textSize="@dimen/font_size_menu"
-                      android:gravity="center"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      app:layout_constraintStart_toStartOf="@id/ic_bazar"
-                      app:layout_constraintTop_toBottomOf="@id/ic_bazar"
-                      app:layout_constraintEnd_toEndOf="@id/ic_bazar"
-                      />
+                <TextView
+                    android:id="@+id/desc_top_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/top_up_tagihan"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/ic_top_up"
+                    app:layout_constraintStart_toStartOf="@id/ic_top_up"
+                    app:layout_constraintTop_toBottomOf="@id/ic_top_up" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Banner Iklan-->
+            <HorizontalScrollView
+                android:id="@+id/banner_iklan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/list_menu_baris_satu">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/iklan1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="14dp"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparant"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/iklan_banner_satu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/iklan2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="14dp"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparant"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/iklan_banner_dua"
+                        app:layout_constraintStart_toEndOf="@id/iklan1"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
-                  <ImageView
-                      android:id="@+id/ic_live_shopping"
-                      android:layout_width="40dp"
-                      android:layout_height="40dp"
-                      android:layout_marginRight="14dp"
-                      android:src="@drawable/live_shopping"
-                      app:layout_constraintStart_toEndOf="@id/ic_bazar"
-                      app:layout_constraintTop_toTopOf="parent"
-                      app:layout_constraintEnd_toStartOf="@id/ic_tokopedia_seru"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                  <TextView
-                      android:id="@+id/desc_live_shopping"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:gravity="center"
-                      android:text="@string/live_shopping"
-                      android:textSize="@dimen/font_size_menu"
-                      app:layout_constraintEnd_toEndOf="@id/ic_live_shopping"
-                      app:layout_constraintStart_toStartOf="@id/ic_live_shopping"
-                      app:layout_constraintTop_toBottomOf="@id/ic_live_shopping" />
 
-                  <ImageView
-                      android:id="@+id/ic_tokopedia_seru"
-                      android:src="@drawable/seru"
-                      android:layout_width="40dp"
-                      android:layout_height="40dp"
-                      android:layout_marginEnd="14dp"
-                      app:layout_constraintStart_toEndOf="@id/ic_live_shopping"
-                      app:layout_constraintTop_toTopOf="parent"
-                      app:layout_constraintEnd_toStartOf="@id/ic_bangga_lokal"/>
+            </HorizontalScrollView>
 
-                  <TextView
-                      android:id="@+id/desc_tokopedia_seru"
-                      android:text="@string/tokopedia_seru"
-                      android:textSize="@dimen/font_size_menu"
-                      android:gravity="center"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      app:layout_constraintStart_toStartOf="@id/ic_tokopedia_seru"
-                      app:layout_constraintTop_toBottomOf="@id/ic_tokopedia_seru"
-                      app:layout_constraintEnd_toEndOf="@id/ic_tokopedia_seru"/>
+            <!--Menu Lis Satu-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/list_menu_baris_dua"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/banner_iklan">
 
-                  <ImageView
-                      android:id="@+id/ic_bangga_lokal"
-                      android:layout_width="40dp"
-                      android:layout_height="40dp"
-                      android:src="@drawable/bangga_lokal"
-                      app:layout_constraintStart_toEndOf="@id/ic_tokopedia_seru"
-                      app:layout_constraintTop_toTopOf="parent"
-                      app:layout_constraintEnd_toEndOf="parent"/>
+                <ImageView
+                    android:id="@+id/ic_pedulilindungi"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/peduli_lindungi"
+                    app:layout_constraintEnd_toStartOf="@id/ic_bazar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                  <TextView
-                      android:id="@+id/desc_bangga_lokal"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:textSize="@dimen/font_size_menu"
-                      android:gravity="center"
-                      android:text="@string/bangga_lokal"
-                      app:layout_constraintBottom_toBottomOf="parent"
-                      app:layout_constraintEnd_toEndOf="@id/ic_bangga_lokal"
-                      app:layout_constraintStart_toStartOf="@id/ic_bangga_lokal"
-                      app:layout_constraintTop_toBottomOf="@id/ic_bangga_lokal" />
+                <TextView
+                    android:id="@+id/desc_peduli_lindungi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/peduli_lindungi"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintEnd_toEndOf="@id/ic_pedulilindungi"
+                    app:layout_constraintStart_toStartOf="@id/ic_pedulilindungi"
+                    app:layout_constraintTop_toBottomOf="@id/ic_pedulilindungi" />
 
-              </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/ic_bazar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/bazar"
+                    app:layout_constraintEnd_toStartOf="@id/ic_live_shopping"
+                    app:layout_constraintStart_toEndOf="@id/ic_pedulilindungi"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-              <TextView
-                  android:text="Kejar Diskon Spesial"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  app:layout_constraintTop_toBottomOf="@id/list_menu_baris_dua"
-                  app:layout_constraintStart_toStartOf="parent"/>
+                <TextView
+                    android:id="@+id/desc_bazar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/bazar_hari_ini"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintEnd_toEndOf="@id/ic_bazar"
+                    app:layout_constraintStart_toStartOf="@id/ic_bazar"
+                    app:layout_constraintTop_toBottomOf="@id/ic_bazar" />
 
-          </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/ic_live_shopping"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/live_shopping"
+                    app:layout_constraintEnd_toStartOf="@id/ic_tokopedia_seru"
+                    app:layout_constraintStart_toEndOf="@id/ic_bazar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/desc_live_shopping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/live_shopping"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintEnd_toEndOf="@id/ic_live_shopping"
+                    app:layout_constraintStart_toStartOf="@id/ic_live_shopping"
+                    app:layout_constraintTop_toBottomOf="@id/ic_live_shopping" />
+
+                <ImageView
+                    android:id="@+id/ic_tokopedia_seru"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="14dp"
+                    android:src="@drawable/seru"
+                    app:layout_constraintEnd_toStartOf="@id/ic_bangga_lokal"
+                    app:layout_constraintStart_toEndOf="@id/ic_live_shopping"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/desc_tokopedia_seru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tokopedia_seru"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintEnd_toEndOf="@id/ic_tokopedia_seru"
+                    app:layout_constraintStart_toStartOf="@id/ic_tokopedia_seru"
+                    app:layout_constraintTop_toBottomOf="@id/ic_tokopedia_seru" />
+
+                <ImageView
+                    android:id="@+id/ic_bangga_lokal"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/bangga_lokal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_tokopedia_seru"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/desc_bangga_lokal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/bangga_lokal"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/ic_bangga_lokal"
+                    app:layout_constraintStart_toStartOf="@id/ic_bangga_lokal"
+                    app:layout_constraintTop_toBottomOf="@id/ic_bangga_lokal" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/kejar_diskon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="14dp"
+                android:text="Kejar Diskon Spesial"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/list_menu_baris_dua" />
+
+            <TextView
+                android:id="@+id/waktu_diskon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                android:text="Berakhir dalam"
+                app:layout_constraintEnd_toStartOf="@id/kolase_waktu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kejar_diskon" />
+
+            <!--Count Waktu Diskon-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/kolase_waktu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/hire_round"
+                android:backgroundTint="@color/merah"
+                app:layout_constraintEnd_toEndOf="@id/waktu_diskon"
+                app:layout_constraintStart_toEndOf="@id/waktu_diskon"
+                app:layout_constraintTop_toTopOf="@id/waktu_diskon">
+
+                <ImageButton
+                    android:id="@+id/ic_jam"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/jam"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="01:29:56"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_jam"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_jam"
+                    app:layout_constraintTop_toTopOf="@id/ic_jam" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Lihat Semua-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="14dp"
+                android:text="Lihat Semua"
+                android:textColor="@color/hijau_tokped"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/kolase_waktu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/kolase_waktu" />
+
+            <HorizontalScrollView
+                android:id="@+id/produk_kejar_diskon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@color/hijau_tokped"
+                android:padding="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/waktu_diskon">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/iklan_baris_satu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hire_round"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/iklan_baris_dua">
+
+                        <ImageButton
+                            android:id="@+id/img_iklan_satu"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:adjustViewBounds="true"
+                            android:background="@color/transparant"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/iklan_satu"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/harga_diskon_iklan_satu"
+                            android:text="Rp 500.000"
+                            android:textStyle="bold"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginStart="14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/img_iklan_satu"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/diskon"
+                            android:text="50%"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_menu"
+                            android:background="@drawable/round_small"
+                            android:backgroundTint="@color/merah"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintTop_toBottomOf="@id/harga_diskon_iklan_satu"
+                            app:layout_constraintStart_toStartOf="@id/harga_diskon_iklan_satu"/>
+
+                        <TextView
+                            android:text="@string/harga_sebelum_diskon"
+                            android:textSize="@dimen/font_size_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            app:layout_constraintStart_toEndOf="@id/diskon"
+                            app:layout_constraintTop_toTopOf="@id/diskon"
+                            app:layout_constraintBottom_toBottomOf="@id/diskon"
+                            />
+
+                        <ImageButton
+                            android:id="@+id/lokasi_seller"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="@color/transparant"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/official_store_nooutline"
+                            app:layout_constraintStart_toStartOf="@id/diskon"
+                            app:layout_constraintTop_toBottomOf="@id/diskon" />
+
+                        <TextView
+                            android:text="Jakarta Timur"
+                            android:textSize="@dimen/font_size_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            app:layout_constraintStart_toEndOf="@id/lokasi_seller"
+                            app:layout_constraintTop_toTopOf="@id/lokasi_seller"
+                            app:layout_constraintBottom_toBottomOf="@id/lokasi_seller"
+                            />
+
+                        <ProgressBar
+                            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginBottom="14dp"
+                            android:indeterminateTint="#FF0000"
+                            android:progress="10"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/lokasi_seller"
+                            app:layout_constraintTop_toBottomOf="@id/lokasi_seller"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/iklan_baris_dua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hire_round"
+                        android:layout_marginLeft="14dp"
+                        app:layout_constraintStart_toEndOf="@id/iklan_baris_satu"
+                        app:layout_constraintTop_toTopOf="@id/iklan_baris_satu"
+                        app:layout_constraintBottom_toBottomOf="@id/iklan_baris_satu">
+
+                        <ImageButton
+                            android:id="@+id/img_iklan_dua"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:adjustViewBounds="true"
+                            android:background="@color/transparant"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/iklan_dua"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/harga_diskon_iklan_dua"
+                            android:text="Rp 450.000"
+                            android:textStyle="bold"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginStart="14dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/img_iklan_dua"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/diskon_dua"
+                            android:text="50%"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_menu"
+                            android:background="@drawable/round_small"
+                            android:backgroundTint="@color/merah"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintTop_toBottomOf="@id/harga_diskon_iklan_dua"
+                            app:layout_constraintStart_toStartOf="@id/harga_diskon_iklan_dua"/>
+
+                        <TextView
+                            android:text="Rp 900.000"
+                            android:textSize="@dimen/font_size_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            app:layout_constraintStart_toEndOf="@id/diskon_dua"
+                            app:layout_constraintTop_toTopOf="@id/diskon_dua"
+                            app:layout_constraintBottom_toBottomOf="@id/diskon_dua"
+                            />
+
+                        <ImageButton
+                            android:id="@+id/lokasi_seller_dua"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:background="@color/transparant"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/official_store_nooutline"
+                            app:layout_constraintStart_toStartOf="@id/diskon_dua"
+                            app:layout_constraintTop_toBottomOf="@id/diskon_dua" />
+
+                        <TextView
+                            android:text="Jakarta Timur"
+                            android:textSize="@dimen/font_size_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            app:layout_constraintStart_toEndOf="@id/lokasi_seller_dua"
+                            app:layout_constraintTop_toTopOf="@id/lokasi_seller_dua"
+                            app:layout_constraintBottom_toBottomOf="@id/lokasi_seller_dua"/>
+
+                        <ProgressBar
+                            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginBottom="14dp"
+                            android:indeterminateTint="#FF0000"
+                            android:progress="10"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/lokasi_seller_dua"
+                            app:layout_constraintTop_toBottomOf="@id/lokasi_seller_dua"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            </HorizontalScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
