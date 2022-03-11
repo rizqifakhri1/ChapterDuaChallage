@@ -6,4 +6,9 @@ Membuat aplikasi android yang memiliki tampilan seperti Tokopedia<br/>
 Nama  : Muhammad Rizqi Fakhri Kurniawan<br/>
 NIM   : 5302419020<br/>
 Kelas : Binar AND-4<br/>
-Email : rizqifakhri@students.unnes.ac.id
+Email : rizqifakhri@students.unnes.ac.id<br/>
+
+ <h1>Preview Aplikasi Clone Tokopedia</h1>
+ ![image](https://drive.google.com/uc?export=view&id=1vOfL9kbIONHbvoFAc5StYH4GmEGroMgz)
+ 
+ 
