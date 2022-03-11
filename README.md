@@ -9,5 +9,7 @@ Kelas : Binar AND-4<br/>
 Email : rizqifakhri@students.unnes.ac.id<br/>
 
  <h1>Preview Aplikasi Clone Tokopedia</h1>
-<img src="https://drive.google.com/uc?export=view&id=1vOfL9kbIONHbvoFAc5StYH4GmEGroMgz" style="width: 650px; max-width: 100%; height: auto" title="Click to enlarge picture" />
- 
+https://drive.google.com/file/d/1wQ-QjHBJ4ZgXDCKQHRNTiQDicU1qmMtp/view?usp=sharing
+
+<h1>Asset</h1>
+https://www.figma.com/file/wtj99exxTC6ULB1Kd0OIn9/UI?node-id=123%3A33
