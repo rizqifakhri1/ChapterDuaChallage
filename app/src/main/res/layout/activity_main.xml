@@ -422,7 +422,8 @@
                         android:src="@drawable/iklan_banner_dua"
                         android:contentDescription="@string/icon"
                         app:layout_constraintStart_toEndOf="@id/iklan1"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -988,7 +989,7 @@
             android:id="@+id/ic_transaksi"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/topup"
+            android:src="@drawable/transaksi"
             android:background="@color/transparant"
             android:scaleType="fitCenter"
             android:contentDescription="@string/icon"
